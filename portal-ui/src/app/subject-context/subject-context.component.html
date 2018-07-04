@@ -1,0 +1,84 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group" id="adv-search">
+        <input type="text" class="form-control" placeholder="Subject"  [(ngModel)]="subject" disabled/>
+        <div class="input-group-btn">
+          <div class="btn-group" role="group">
+            <div class="dropdown dropdown-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="caret"></span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" role="menu">
+                <form class="form-horizontal" role="form">
+
+                  <div id="grouplist" class="list-group scrollable">
+                    <a  *ngFor="let item of items; let i=index" (click)="select(i,item)"
+                        [ngClass]="{'active': selectedIndex == i, 'list-group-item': true,'list-group-item-action':true}" >
+                      {{ item }}
+                    </a>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="otherValue"><small class="form-text text-muted otherValueLabel">Other Value</small></label>
+                    <input class="form-control" type="text" name="otherValue" id="otherValue"  [ngClass]="{'activated': otherValue !=''}" [(ngModel)]="otherValue" (focus)="onKeyPress()" (keypress)="onKeyPress()" (keydown)="onKeyPress()" (keyup)="onKeyPress()"/>
+                  </div>
+
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<!--
+Original Sample DD widget
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group" id="adv-search">
+        <input type="text" class="form-control" placeholder="Search for snippets" />
+        <div class="input-group-btn">
+          <div class="btn-group" role="group">
+            <div class="dropdown dropdown-lg">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+              <div class="dropdown-menu dropdown-menu-right" role="menu">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="filter">Filter by</label>
+                    <select class="form-control">
+                      <option value="0" selected>All Snippets</option>
+                      <option value="1">Featured</option>
+                      <option value="2">Most popular</option>
+                      <option value="3">Top rated</option>
+                      <option value="4">Most commented</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="contain">Author</label>
+                    <input class="form-control" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="contain">Contains the words</label>
+                    <input class="form-control" type="text" />
+                  </div>
+                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </form>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->

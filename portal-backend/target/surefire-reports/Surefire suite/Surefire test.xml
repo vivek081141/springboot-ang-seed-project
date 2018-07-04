@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="C02W35X2HTD6" name="com.green.countries.ApplicationTest" tests="1" failures="0" timestamp="4 Jul 2018 09:23:32 GMT" time="6.8" errors="0">
+  <testcase name="test" time="5.004" classname="com.green.countries.ApplicationTest"/>
+</testsuite>
